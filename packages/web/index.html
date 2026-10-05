@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta property="og:image" content="/og-image.png" />
+		<meta
+			name="description"
+			content="FlowDesk — clients, projects, tasks, invoices and reports in one calm workspace built for freelancers and small studios."
+		/>
+		<title>FlowDesk — Everything your freelance business needs</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script>
+			// No-flash theme boot: apply the stored theme before first paint.
+			(function () {
+				try {
+					var t = localStorage.getItem("flowdesk-theme") || "system";
+					var dark =
+						t === "dark" ||
+						(t === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+					if (dark) document.documentElement.classList.add("dark");
+					var a = localStorage.getItem("flowdesk-accent");
+					if (a) document.documentElement.setAttribute("data-accent", a);
+				} catch (e) {}
+			})();
+		</script>
+	</head>
+	<body>
+		<div id="root"></div>
+		<script type="module" src="/src/web/main.tsx"></script>
+	</body>
+</html>
